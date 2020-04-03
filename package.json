@@ -2,8 +2,6 @@
   "name": "image-search-imgur",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "12.16.1",
   "author": "poojanagpal",
   "license": "MIT",
   "dependencies": {
@@ -12,6 +10,6 @@
     "node-fetch": "^2.6.0",
     "pug": "^2.0.4",
     "request": "^2.88.2",
-    "start": "node app.js",
+    "start": "node app.js"
     }
   }
