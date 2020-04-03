@@ -1,0 +1,17 @@
+html
+ head
+    style
+        include css/searchpage.css
+    p <strong>Please click on image to enlarge </strong>
+   
+  body
+    button(onclick="move()") Back to Search
+    -var obj = JSON.parse(json)
+   p
+    ul
+    each val, index in obj
+        img(src = val.url)
+script.
+    function move() {
+      window.location.href = "/"
+    }

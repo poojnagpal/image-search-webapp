@@ -1,0 +1,14 @@
+{
+  "name": "image-search-imgur",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "poojanagpal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "node-fetch": "^2.6.0",
+    "pug": "^2.0.4",
+    "request": "^2.88.2"
+  }
+}

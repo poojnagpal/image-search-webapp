@@ -1,0 +1,143 @@
+<html>
+<head>
+<script>
+    function setURL(){
+        var dt_value = document.getElementById("dt_id").value;
+        console.log(dt_value)
+        // alert(dt_value );
+        var sjdurl =  "/search/"+dt_value;
+
+        popup = window.open(sjdurl,"popup"," menubar =0,toolbar =0,location=0, height=900, width=1000"); 
+        popup.window.moveTo(950,150); 
+    }
+
+
+</script>
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="search-wrapper">
+            <div class="input-wrapper">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+            <input type="text" id="dt_id" placeholder="Search">
+            <div class = 'submit_button'>
+            <input type='button' onclick='setURL()' value='Find Image'> 
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+ <style type='text/css'>
+    html,
+    body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to top left, #606c88, #3f4c6b 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    }
+    .submit_button {
+        background-image: linear-gradient(to top left, #606c88, #3f4c6b 30%);
+
+    }
+
+
+    .search-wrapper {
+    display: flex;
+    padding: 30px 50px;
+    position: relative;
+    color: white;
+    z-index: 0;
+    height: 40px;
+    overflow: hidden;
+    }
+    .search-wrapper:before {
+    content: "";
+    background: #fff;
+    opacity: 0.2;
+    filter: blur(20px);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    }
+    .input-wrapper {
+    height: 100%;
+    border-right: 2px dashed #fff;
+    }
+    .input-wrapper .search-icon {
+    margin-right: 15px;
+    }
+    .input-wrapper input {
+    color: white;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    height: 100%;
+    width: 250px;
+    background: none;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    }
+    ::placeholder {
+    color: white;
+    }
+    .search-select {
+    position: relative;
+    }
+    .search-select .btn-select {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+    }
+    .search-select .btn-select .label {
+    margin-right: 15px;
+    }
+    .search-btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background: #fff;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    display: none;
+    animation-name: bounceIn;
+    animation-duration: 0.5s;
+    }
+    .search-select .options {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    top: -46px;
+    right: 5px;
+    background: #3f4c6b;
+    list-style: none;
+    display: none;
+    padding: 0;
+    }
+    .search-select .options li {
+    padding: 5px 0 5px 5px;
+    width: 100%;
+    user-select: none;
+    text-align: center;
+    }
+    .search-select .options li:hover {
+    background-color: #606c88;
+    }
+    .search-select .options li:nth-child(2) {
+    }
