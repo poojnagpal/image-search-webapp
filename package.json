@@ -9,6 +9,7 @@
     "jade": "^1.11.0",
     "node-fetch": "^2.6.0",
     "pug": "^2.0.4",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "start": "node app.js"
+    }
   }
-}
