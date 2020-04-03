@@ -1,36 +1,36 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
 <html>
 <head>
 <script>
     function setURL(){
         var dt_value = document.getElementById("dt_id").value;
-        console.log(dt_value)
         // alert(dt_value );
         var sjdurl =  "/search/"+dt_value;
-
         popup = window.open(sjdurl,"popup"," menubar =0,toolbar =0,location=0, height=900, width=1000"); 
         popup.window.moveTo(950,150); 
     }
-
-
 </script>
 
 <!DOCTYPE html>
 <html>
+    <div class = "title">
+        Search for Images
+     </div>
     <body>
         <div class="search-wrapper">
-            <div class="input-wrapper">
-            <span class="search-icon"><i class="fas fa-search"></i></span>
-            <input type="text" id="dt_id" placeholder="Search">
-            <div class = 'submit_button'>
-            <input type='button' onclick='setURL()' value='Find Image'> 
+                <div class="input-wrapper">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="dt_id" placeholder="Search">
+                <div class = 'submit_button' >
+                    <input class = "input" type='button' onclick='setURL()' value = "Find Image"> 
+                </div>
             </div>
         </div>
     </body>
 </html>
 
-
-
-
+<!-- TODO: move css to own folder -->
  <style type='text/css'>
     html,
     body {
@@ -44,8 +44,25 @@
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 500;
     }
+    .input:hover {
+        background-color: rgb(149, 147, 147);
+        color: white;
+}
     .submit_button {
         background-image: linear-gradient(to top left, #606c88, #3f4c6b 30%);
+    }
+ 
+   
+    .title {
+        font-family: "Times New Roman", Times, serif;
+        color: white;
+        float: top;
+        font-size: 50px;
+        position: absolute;
+        top: 230px;
+        left: 450px;
+        text-shadow: 1px 1px 1px white,
+             1px 1px 1px white;
 
     }
 
@@ -92,20 +109,6 @@
     ::placeholder {
     color: white;
     }
-    .search-select {
-    position: relative;
-    }
-    .search-select .btn-select {
-    height: 100%;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    margin: 0 20px;
-    cursor: pointer;
-    }
-    .search-select .btn-select .label {
-    margin-right: 15px;
-    }
     .search-btn {
     width: 40px;
     height: 40px;
@@ -139,5 +142,4 @@
     .search-select .options li:hover {
     background-color: #606c88;
     }
-    .search-select .options li:nth-child(2) {
-    }
+   
